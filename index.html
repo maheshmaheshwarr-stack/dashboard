@@ -7,157 +7,147 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="2685.2">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
   </style>
 </head>
 <body>
-<p class="p1">&lt;!-- index.html (copy-paste and customize) --&gt;</p>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Maheshwar’s Daily Dashboard&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Ritual-aligned, positive daily dashboard blending finance, IT, AI, global affairs, and culture." /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root { --bg:#0b132b; --panel:#1c2541; --accent:#5bc0be; --text:#eaeff5; --muted:#a3b5c3; --good:#8bd38b; --warn:#f4c95d; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>*{box-sizing:border-box} body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header{padding:24px;border-bottom:1px solid #23395b;position:sticky;top:0;background:var(--bg);z-index:10}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h1{margin:0 0 6px;color:var(--accent);font-size:24px} .meta{color:var(--muted);font-size:14px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.container{padding:24px;display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>section{background:var(--panel);border:1px solid #23395b;border-radius:12px;padding:16px;box-shadow:0 6px 22px rgba(0,0,0,0.2)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>section h2{margin:0 0 10px;color:var(--accent);font-size:18px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.item{margin-bottom:10px;padding-bottom:10px;border-bottom:1px dashed #2e3f63}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.item:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.label{font-weight:600;color:#cfe9e8} .value{color:var(--text)} .muted{color:var(--muted);font-size:13px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.pill{display:inline-block;padding:4px 10px;border-radius:999px;font-size:12px;margin-right:6px;border:1px solid #3a516e}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.good{color:var(--good);border-color:var(--good)} .warn{color:var(--warn);border-color:var(--warn)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn{background:transparent;color:var(--accent);border:1px solid var(--accent);padding:8px 12px;border-radius:8px;cursor:pointer}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.top-actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap} footer{padding:18px;text-align:center;color:var(--muted)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Maheshwar’s Daily Dashboard&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="meta"&gt;Hyderabad • Positive tone • Ritual + Finance + IT + AI + Global affairs + Culture&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="top-actions"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn" onclick="refreshData()"&gt;Refresh&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn" onclick="toggleCompact()"&gt;Toggle compact&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn" onclick="downloadJSON()"&gt;Export data&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="meta" id="updatedAt"&gt;Updated: —&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;main class="container" id="cards"&gt;&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>Crafted for intentional living: align action with auspicious windows, embrace innovation, and celebrate progress.</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1">let config = {}; // Loaded from dashboard-config.json</p>
-<p class="p2"><br></p>
-<p class="p1">function card(title, itemsHtml) {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const el = document.createElement('section');</p>
-<p class="p1"><span class="Apple-converted-space">  </span>el.innerHTML = `&lt;h2&gt;${title}&lt;/h2&gt;${itemsHtml}`;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>return el;</p>
-<p class="p1">}</p>
-<p class="p1">function listItem(label, value, extra) {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>return `&lt;div class="item"&gt;&lt;div class="label"&gt;${label}&lt;/div&gt;&lt;div class="value"&gt;${value}&lt;/div&gt;${extra?`&lt;div class="muted"&gt;${extra}&lt;/div&gt;`:""}&lt;/div&gt;`;</p>
-<p class="p1">}</p>
-<p class="p1">function listArray(arr) {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>return `&lt;ul style="margin:6px 0 0 16px;padding:0"&gt;${arr.map(x=&gt;`&lt;li&gt;${x}&lt;/li&gt;`).join("")}&lt;/ul&gt;`;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function render() {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const cards = document.getElementById('cards');</p>
-<p class="p1"><span class="Apple-converted-space">  </span>cards.innerHTML = "";</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>// Order: IT + AI + International Politics at top (as requested)</p>
-<p class="p1"><span class="Apple-converted-space">  </span>cards.appendChild(card("IT industry", `${listItem("Highlights", listArray(config.it.highlights))}${listItem("Opportunities", listArray(config.it.opportunities))}`));</p>
-<p class="p1"><span class="Apple-converted-space">  </span>cards.appendChild(card("Artificial intelligence", `${listItem("Breakthroughs", listArray(config.ai.breakthroughs))}${listItem("Adoption", listArray(config.ai.adoption))}`));</p>
-<p class="p1"><span class="Apple-converted-space">  </span>cards.appendChild(card("International politics", `${listItem("Positive developments", listArray(config.international.positives))}${listItem("Cooperation &amp; dialogue", listArray(config.international.dialogues))}`));</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>// Local &amp; Ritual</p>
-<p class="p1"><span class="Apple-converted-space">  </span>cards.appendChild(card("Local &amp; ritual timings", `</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Location", config.meta.location)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Date", config.meta.date)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Rahu Kalam", config.ritual.rahuKalam, config.ritual.note)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Yamagandam", config.ritual.yamagandam)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="pill warn"&gt;Auspicious window: Abhijit&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="pill good"&gt;Positive alignment&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>`));</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>// Current affairs</p>
-<p class="p1"><span class="Apple-converted-space">  </span>cards.appendChild(card("Current affairs (India)", `</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Stability signals", listArray(config.india.stability))}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Civic progress", listArray(config.india.civic))}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>`));</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>// Finance</p>
-<p class="p1"><span class="Apple-converted-space">  </span>cards.appendChild(card("Finance &amp; investments", `</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("FD outlook", config.finance.fdOutlook)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Dividends", listArray(config.finance.dividends))}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Strategy", listArray(config.finance.strategy))}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>`));</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>// Lifestyle</p>
-<p class="p1"><span class="Apple-converted-space">  </span>cards.appendChild(card("Nutrition &amp; lifestyle (Ayurveda)", `</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Pillars", listArray(config.ayurveda.pillars))}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Seasonal nourishment", listArray(config.ayurveda.seasonal))}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>`));</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>// Entertainment</p>
-<p class="p1"><span class="Apple-converted-space">  </span>cards.appendChild(card("Entertainment &amp; culture (Tollywood + symbolism)", `</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Tollywood", listArray(config.cinema.tollywood))}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Symbolic reflection", listArray(config.cinema.symbolism))}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>`));</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>// Sports</p>
-<p class="p1"><span class="Apple-converted-space">  </span>cards.appendChild(card("Cricket highlights", `</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Wins &amp; milestones", listArray(config.sports.highlights))}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Upcoming excitement", listArray(config.sports.upcoming))}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>`));</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>// Real estate</p>
-<p class="p1"><span class="Apple-converted-space">  </span>cards.appendChild(card("Real estate (Hyderabad)", `</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Market confidence", listArray(config.realEstate.confidence))}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>${listItem("Opportunities", listArray(config.realEstate.opportunities))}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>`));</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('updatedAt').textContent = "Updated: " + new Date().toLocaleString('en-GB');</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function refreshData() { render(); }</p>
-<p class="p1">function toggleCompact() {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const container = document.querySelector('.container');</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const current = getComputedStyle(container).gridTemplateColumns;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>container.style.gridTemplateColumns = current.includes('minmax') ? '1fr' : 'repeat(auto-fit,minmax(320px,1fr))';</p>
-<p class="p1">}</p>
-<p class="p1">function downloadJSON() {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const blob = new Blob([JSON.stringify(config, null, 2)], { type: "application/json" });</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const a = document.createElement('a');</p>
-<p class="p1"><span class="Apple-converted-space">  </span>a.href = URL.createObjectURL(blob);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>a.download = "dashboard-config.json";</p>
-<p class="p1"><span class="Apple-converted-space">  </span>a.click();</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">fetch('dashboard-config.json')</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.then(r =&gt; r.json())</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.then(data =&gt; { config = data; render(); })</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.catch(() =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>config = { meta:{location:"Hyderabad",date:"—"}, ritual:{rahuKalam:"—",yamagandam:"—",note:"—"},</p>
-<p class="p1"><span class="Apple-converted-space">      </span>it:{highlights:["—"], opportunities:["—"]}, ai:{breakthroughs:["—"], adoption:["—"]},</p>
-<p class="p1"><span class="Apple-converted-space">      </span>international:{positives:["—"], dialogues:["—"]}, india:{stability:["—"], civic:["—"]},</p>
-<p class="p1"><span class="Apple-converted-space">      </span>finance:{fdOutlook:"—",dividends:["—"], strategy:["—"]}, ayurveda:{pillars:["—"], seasonal:["—"]},</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cinema:{tollywood:["—"], symbolism:["—"]}, sports:{highlights:["—"], upcoming:["—"]},</p>
-<p class="p1"><span class="Apple-converted-space">      </span>realEstate:{confidence:["—"], opportunities:["—"]} };</p>
-<p class="p1"><span class="Apple-converted-space">    </span>render();</p>
-<p class="p1"><span class="Apple-converted-space">  </span>});</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;Maheshwar’s Daily Dashboard&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #0b132b;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #eaeff5;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>header {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #1c2541;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #5bc0be;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>section {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #1c2541;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 4px 10px rgba(0,0,0,0.3);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>h2 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #5bc0be;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>ul {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding-left: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>footer {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #a3b5c3;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;header&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Maheshwar’s Daily Dashboard&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;Hyderabad • Ritual + Finance + IT + AI + Global Affairs&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;🌍 Local &amp; Ritual&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Rahu Kalam: 12:07 PM – 1:31 PM&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Yamagandam: 7:55 AM – 9:19 AM&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Positive Note: Align actions with auspicious windows for harmony.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;📰 Current Affairs&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;RBI reaffirms stability of SBI, HDFC, ICICI.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Supreme Court actions aim for safer communities.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Aviation safety strengthened by DGCA oversight.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;💻 IT Industry&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Sonata Software and Wipro show resilience.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;AWS unveils AI agents for autonomous tasks.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;🤖 Artificial Intelligence&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Meesho IPO boosts AI infrastructure in India.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;NHS UK adopts AI stroke imaging tools.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Claude Opus 4.5 sets new benchmarks.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;🌐 International Politics&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Russia–US talks continue for peace in Ukraine.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;UN Day highlights inclusion and progress.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Global leaders emphasize cooperation on trade and energy.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;💰 Finance&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;FD ladders remain reliable for monthly cashflow.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Recent dividends: Canara Robeco, ICICI Prudential, Tata Equity Saving Fund.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;🍲 Nutrition &amp; Lifestyle&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Ayurvedic Dinacharya routines encourage balance.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Winter nourishment: spiced soups, sesame, ghee.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;🎭 Entertainment &amp; Culture&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Pushpa 3 confirmed, Tollywood momentum continues.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Prabhas’ Spirit secures major OTT deal.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;🏏 Sports&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;India wins Asia Cup 2025.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Excitement builds for 2026 T20 World Cup.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;🏠 Real Estate&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Kokapet Neopolis auctions show strong confidence.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;Premium plots signal developer optimism.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>Crafted for intentional living: align ritual, embrace innovation, celebrate progress 🌟</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
 </body>
 </html>
